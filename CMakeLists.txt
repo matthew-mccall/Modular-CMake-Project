@@ -4,16 +4,12 @@ project(Engine)
 
 add_subdirectory(include/)
 
-set(ENGINE_MODULE_INCLUDES "")
-set(ENGINE_MODULE_INIT_FUNCS "")
-set(ENGINE_MODULE_DEINIT_FUNCS "")
-set(ENGINE_MODULES "")
-
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(AddModule)
 
 AddModule(Extension)
+AddModule(Extension2)
 
 configure_file(src/Modules.cpp.in Modules.cpp)
 
